@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dugypdj862yl2"]
+
+[ext_resource type="Texture2D" uid="uid://dp8ktana2nyf3" path="res://Assets/blablabla.jpg" id="1_7kc6r"]
+[ext_resource type="Script" uid="uid://bydjen2pvlm5e" path="res://Scenes/play.gd" id="2_dm5w0"]
+[ext_resource type="FontFile" uid="uid://3qmvim65vi8m" path="res://Assets/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="3_cuppe"]
+[ext_resource type="PackedScene" uid="uid://fwk0u47wcqmj" path="res://Scenes/sound.tscn" id="4_0eko3"]
+
+[node name="Blablabla" type="Sprite2D"]
+modulate = Color(0.768668, 0.775976, 0.785917, 1)
+position = Vector2(483, 332)
+texture = ExtResource("1_7kc6r")
+script = ExtResource("2_dm5w0")
+
+[node name="PLAY" type="Button" parent="."]
+offset_left = -29.0
+offset_top = -1.0
+offset_right = 202.0
+offset_bottom = 79.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_cuppe")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -206.0
+offset_top = -172.0
+offset_right = 437.0
+offset_bottom = -87.0
+theme_override_fonts/font = ExtResource("3_cuppe")
+theme_override_font_sizes/font_size = 70
+text = "NEON INSURRECTION"
+
+[node name="Node2D" parent="." instance=ExtResource("4_0eko3")]
+
+[connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://btx6xb61t54op"]
+
+[ext_resource type="Texture2D" uid="uid://dc6yn4sivsius" path="res://Assets/sky-citadel-people.png" id="1_qa7k4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2ags"]
+atlas = ExtResource("1_qa7k4")
+region = Rect2(0, 0, 69, 173)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xofoq"]
+atlas = ExtResource("1_qa7k4")
+region = Rect2(207, 0, 69, 173)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8n65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2ags")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xofoq")
+}],
+"loop": true,
+"name": &"leader",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa7k4"]
+size = Vector2(98, 176)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x8n65")
+animation = &"leader"
+frame_progress = 0.507201
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
+z_index = 2
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_qa7k4")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq037w3bovg5q"]
+
+[ext_resource type="Texture2D" uid="uid://bmbdhf21efpqf" path="res://Assets/underground.png" id="1_bilru"]
+[ext_resource type="PackedScene" uid="uid://dhfiaix0qcmv2" path="res://Scenes/player.tscn" id="2_0pxf5"]
+[ext_resource type="Script" uid="uid://bxlvwjvp6aio2" path="res://label2.gd" id="3_kldqc"]
+[ext_resource type="PackedScene" uid="uid://fwk0u47wcqmj" path="res://Scenes/sound.tscn" id="4_0pxf5"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_glr8a"]
+distance = -0.960793
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.439049, 0.439049, 0.439049, 1)
+position = Vector2(635, 324)
+texture = ExtResource("1_bilru")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_0pxf5")]
+position = Vector2(139, 514)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 152.0
+offset_top = 302.0
+offset_right = 192.0
+offset_bottom = 325.0
+scale = Vector2(0.879512, 1.32453)
+script = ExtResource("3_kldqc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(139, 514)
+scale = Vector2(4.16321, 4.16321)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_glr8a")
+
+[node name="Node2D" parent="." instance=ExtResource("4_0pxf5")]

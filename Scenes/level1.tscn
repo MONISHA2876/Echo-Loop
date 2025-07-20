@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh8wo11cuj38f"]
+
+[ext_resource type="PackedScene" uid="uid://dhfiaix0qcmv2" path="res://Scenes/player.tscn" id="1_4hvuo"]
+[ext_resource type="Texture2D" uid="uid://bgms7x6qgbp8" path="res://Assets/Cyberpunk_pixel_art_combat_arena_converted.png" id="2_vly50"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vly50"]
+distance = -1.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player_1" parent="." instance=ExtResource("1_4hvuo")]
+position = Vector2(-4, -213)
+
+[node name="Camera2D" type="Camera2D" parent="Player_1"]
+zoom = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_vly50")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2D"]
+position = Vector2(6, -255)
+scale = Vector2(0.633929, 0.498047)
+texture = ExtResource("2_vly50")
