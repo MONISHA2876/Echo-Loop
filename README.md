@@ -6,16 +6,26 @@
 
 Right now, it's a simple playable build — you can **walk**, **jump**, and explore basic **platforms**. But a deeper, story-driven world is under construction. This is just the beginning.
 
----
-
-## 🌱 Current Features (v0.1)
-
-- ✅ Player movement (left/right)
-- ✅ Jumping and gravity
-- ✅ Platform climbing & collisions
-- ✅ Minimal world layout
-- ✅ Audio setup with `AudioStreamPlayer`
-- 🧠 Storyline concept under development
+<table>
+  <tr>
+    <td width="50%">
+      <h2>🌱 Current Features (v0.1)</h2>
+      <p>
+        <ul>
+          <li>✅ Player movement (left/right)</li>
+          <li>✅ Jumping and gravity</li>
+          <li>✅ Platform climbing & collisions</li>
+          <li>✅ Minimal world layout</li>
+          <li>✅ Audio setup with AudioStreamPlayer</li>
+         <li>🧠 Storyline concept under development</li>
+        </ul>
+      </p>
+    </td>
+    <td width="50%">
+       <img src="./game.gif" alt="Game Play :)" width="500px" />
+    </td>
+  </tr>
+</table>
 
 ---
 
