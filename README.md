@@ -17,12 +17,12 @@ Right now, it's a simple playable build — you can **walk**, **jump**, and expl
           <li>✅ Platform climbing & collisions</li>
           <li>✅ Minimal world layout</li>
           <li>✅ Audio setup with AudioStreamPlayer</li>
-         <li>🧠 Storyline concept under development</li>
+         <li>🧠 Storyline concept under development (coming soon...)</li>
         </ul>
       </p>
     </td>
     <td width="50%">
-       <img src="./game.gif" alt="Game Play :)" width="500px" />
+       <img src="./game2.gif" alt="Game Play :)" width="500px" />
     </td>
   </tr>
 </table>
